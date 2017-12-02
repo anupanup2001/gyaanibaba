@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Goal } from './goal.model';
+import { Goal, SIP, FundType } from './goal.model';
 
 @Component({
   selector: 'app-goalplanner',
@@ -11,7 +11,8 @@ export class GoalplannerComponent implements OnInit {
   constructor() {
     const goal = new Goal();
     goal.goalName = 'Emergency Fund';
-    goal.currentValue = 40000;
+    goal.currentSIPs.push(new SIP(40000, 0, 0, FundType.Equity));
+    goal.goalSIP = new SIP(0, Math.random() * (10000));
     goal.numOfMonthsToAchieve = 6;
     goal.inflation = 8;
     this.goals.push( goal);
@@ -23,6 +24,7 @@ export class GoalplannerComponent implements OnInit {
   addGoal() {
     const goal = new Goal();
     goal.goalName = 'Goal ' + (this.goals.length + 1);
+    goal.goalSIP = new SIP(0, Math.random() * (10000));
     this.goals.push(goal);
   }
 
