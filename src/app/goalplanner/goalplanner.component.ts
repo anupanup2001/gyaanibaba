@@ -9,7 +9,7 @@ import { Goal } from './goal.model';
 export class GoalplannerComponent implements OnInit {
   goals: Goal[] = new Array<Goal>();
   constructor() {
-    let goal = new Goal();
+    const goal = new Goal();
     goal.goalName = 'Emergency Fund';
     goal.currentValue = 40000;
     goal.numOfMonthsToAchieve = 6;
@@ -21,7 +21,7 @@ export class GoalplannerComponent implements OnInit {
   }
 
   addGoal() {
-    let goal = new Goal();
+    const goal = new Goal();
     goal.goalName = 'Goal ' + (this.goals.length + 1);
     this.goals.push(goal);
   }

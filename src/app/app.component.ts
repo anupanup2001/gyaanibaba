@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   // tslint:disable-next-line:one-line
-  currentSelection = 'home';
+  currentSelection = 'goalplanner';
   constructor(private http: HttpClient){}
   title = 'hello paisagyaan!';
   api = 'Uninitialized';
