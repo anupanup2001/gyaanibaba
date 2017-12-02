@@ -8,13 +8,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   // tslint:disable-next-line:one-line
+  currentSelection = 'home';
   constructor(private http: HttpClient){}
   title = 'hello paisagyaan!';
   api = 'Uninitialized';
 
-  onGoalClick() {
-    this.http.get('/api/').subscribe( data => {
-      this.api = data['message'];
-    });
+  selectTab(tab: string) {
+    this.currentSelection = tab;
   }
 }
