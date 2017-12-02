@@ -5,8 +5,22 @@
         <div class="col-sm-3">
             <i class="goal-logo fa fa-flag"></i>
         </div>
-        <div class="col-sm-9">
-            <p>Goal: {{goal.goalName}}, SIP: {{goal.goalSIP.sipValue}}</p>
+        <div class="col-sm-9 goal-summary">
+            <h6>{{goal.goalName}}</h6>
+            <span>SIP {{goal.goalSIP.sipValue | currency:'INR'}} /month for {{goal.numOfMonthsToAchieve}} months</span>
+            <div class="goal-progress progress">
+                <div 
+                  class="progress-bar bg-success" 
+                  role="progressbar" 
+                  [attr.aria-value-now]="getGoalProgress()"
+                  [style.width]="getGoalProgressPct()"
+                  aria-valuemin="0" 
+                  aria-valuemax="100">
+                </div>
+            </div>
+            <div class="goal-progress-text">
+              <span>{{getCurrentFundValue() | currency:'INR'}} of {{getInflatedGoalValue() | currency:'INR'}}</span>
+            </div>
         </div>  
       </div>  
       

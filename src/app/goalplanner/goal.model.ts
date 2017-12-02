@@ -33,7 +33,17 @@ export class SIP {
 export class Goal {
     goalName: string;
     numOfMonthsToAchieve: number;
-    currentSIPs: SIP[] = new Array<SIP>();
+    goalTargetValueAsOfToday: number;
+    currentSIPs: SIP[];
     goalSIP: SIP;
     inflation: number;
+
+    constructor(goalName: string, numOfMonthsToAchieve: number,
+         goalTargetValueAsOfToday: number, inflation = 6) {
+             this.currentSIPs = new Array<SIP>();
+             this.goalName = goalName;
+             this.numOfMonthsToAchieve = numOfMonthsToAchieve;
+             this.goalTargetValueAsOfToday = goalTargetValueAsOfToday;
+             this.inflation = inflation;
+         }
 }
