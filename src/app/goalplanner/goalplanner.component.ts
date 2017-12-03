@@ -11,8 +11,8 @@ export class GoalplannerComponent implements OnInit {
   constructor() {
     const goal = new Goal('Emergency Fund', 12 + Math.round(Math.random() * 36),
     40000 + Math.round(Math.random() * 40000));
-    goal.currentSIPs.push(new SIP(40000, 0, 0, FundType.Equity));
-    goal.goalSIP = new SIP(0, Math.round(Math.random() * (10000)));
+    goal.currentSIPs.push(new SIP(0, 0, 0, FundType.Equity));
+    goal.goalSIP = new SIP(0, 0);
     this.goals.push( goal);
   }
 
@@ -22,8 +22,8 @@ export class GoalplannerComponent implements OnInit {
   addGoal() {
     const goal = new Goal('Goal ' + (this.goals.length + 1), 12 + Math.round(Math.random() * 36),
       40000 + Math.round(Math.random() * 40000));
-    goal.currentSIPs.push(new SIP(40000, 0, 0, FundType.Equity));
-    goal.goalSIP = new SIP(20000, Math.round(Math.random() * (10000)));
+    goal.currentSIPs.push(new SIP(0, 0, 0, FundType.Equity));
+    goal.goalSIP = new SIP(0, 0);
     this.goals.push(goal);
   }
 
