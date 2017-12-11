@@ -6,14 +6,17 @@ handlers:
 
 - url: /api/.*
   script: main.app
+  secure: always
 
 - url: /(.+)
   static_files: dist/\1
   upload: dist/(.*)
+  secure: always
 
 - url: /
   static_files: dist/index.html
   upload: dist/index.html
+  secure: always
 
 skip_files:
 - ^node_modules$
@@ -23,3 +26,4 @@ skip_files:
 - ^\..+$
 - ^[a-z\.]+js$
 - ^.+\.json$
+- ^venv$
