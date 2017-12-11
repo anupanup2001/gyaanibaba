@@ -1,0 +1,14 @@
+.goal-logo {
+    font-size: 3rem;
+}
+
+.goal-summary {
+    cursor: pointer;
+}
+.goal-summary>h6 {
+    margin-bottom: 0rem;
+}
+
+.goal-progress {
+    height: 0.5rem;
+}

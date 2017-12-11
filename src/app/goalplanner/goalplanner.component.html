@@ -1,8 +1,11 @@
 <h1>Goal Planner</h1>
-<ul>
-  <li *ngFor="let goal of goals">{{goal.goalName}}</li>
-</ul>
+<app-goal 
+  *ngFor="let goal of goals"
+  [goal]="goal">
+</app-goal>
+
 <button 
   type="button" 
-  class="btn btn-outline-success"
-  (click)="addGoal()">Add Goal</button>
+  role="button"
+  class="btn btn-outline-success m-1"
+  (click)="addGoal()"><i class="fa fa-plus"></i> Add Goal</button>

@@ -1,0 +1,68 @@
+<div>
+  <div class="row">
+    <div class="col-sm-5">
+      <div 
+        class="row border border-success m-1">
+        <div class="col-sm-3">
+            <i class="goal-logo fa fa-flag"></i>
+        </div>
+        <div class="col-sm-9 goal-summary" (click)="toggleGoalEdit()">
+            <h6>{{goal.goalName}}</h6>
+            <span>SIP {{computeSIP() | currency:'INR'}} /month for {{goal.numOfMonthsToAchieve}} months</span>
+            <div class="goal-progress progress">
+                <div 
+                  class="progress-bar bg-success" 
+                  role="progressbar" 
+                  [attr.aria-value-now]="getGoalProgress()"
+                  [style.width]="getGoalProgressPct()"
+                  aria-valuemin="0" 
+                  aria-valuemax="100">
+                </div>
+            </div>
+            <div class="goal-progress-text">
+              <span>{{getCurrentFundValue() | currency:'INR'}} of {{getInflatedGoalValue() | currency:'INR'}}</span>
+            </div>
+        </div>
+
+        <div class="goal-edit col-sm-12 mt-4" *ngIf="showGoalEdit">
+          <form>
+            <div class="form-group">
+              <label for="goal-name">Goal Name</label>
+              <input 
+                type="text" 
+                id="goal-name"
+                name="goal-name" 
+                class="form-control" 
+                [(ngModel)]="goal.goalName"
+                >
+            </div>
+            <div class="form-group">
+              <label for="goal-target-value-as-of-today">Amount needed (as of today)</label>
+              <input 
+                type="number" 
+                id="goal-target-value-as-of-today"
+                name="goal-target-value-as-of-today" 
+                class="form-control" 
+                [(ngModel)]="goal.goalTargetValueAsOfToday"
+                >
+            </div>
+
+            <div class="form-group">
+              <label for="goal-num-months">No. of months</label>
+              <input 
+                type="number" 
+                id="goal-num-months"
+                name="goal-num-months" 
+                class="form-control" 
+                [(ngModel)]="goal.numOfMonthsToAchieve"
+                >
+            </div>
+          </form>
+        </div>
+      </div>  
+      
+    </div>
+
+  </div>
+  
+</div>
