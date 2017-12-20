@@ -39,7 +39,7 @@
     "jquery": "^3.2.1",
     "popper.js": "^1.12.9",
     "rxjs": "^5.5.2",
-    "typescript": "~2.4.2",
+    "typescript": "^2.4.2",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
@@ -60,8 +60,7 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
-    "ts-node": "~3.2.0",
-    "tslint": "~5.7.0",
-    "typescript": "~2.4.2"
+    "ts-node": "^4.0.2",
+    "tslint": "^5.8.0"
   }
 }
