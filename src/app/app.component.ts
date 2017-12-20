@@ -9,10 +9,9 @@ import * as firebase from 'firebase/app';
 })
 export class AppComponent {
   // tslint:disable-next-line:one-line
-  currentSelection = 'goalplanner';
+  currentSelection = 'home';
   constructor(private http: HttpClient, public afAuth: AngularFireAuth) {}
   title = 'hello paisagyaan!';
-  api = 'Uninitialized';
 
   selectTab(tab: string) {
     this.currentSelection = tab;
