@@ -1,4 +1,38 @@
-<div>
+<mat-card class="goal-card">
+  <mat-card-header>
+    <!--div mat-card-avatar class="example-header-image"></div-->
+    <mat-card-title>
+      <i class="goal-logo fa fa-flag"></i> <span class="goal-title">{{goal.goalName}}</span>
+    </mat-card-title>
+    <!--mat-card-subtitle>Dog Breed</mat-card-subtitle-->
+  </mat-card-header>
+  <!--img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"-->
+  <mat-card-content>
+      <div class="col-sm-9 goal-summary" (click)="toggleGoalEdit()">
+          <span>SIP {{computeSIP() | currency:'INR'}} /month for {{goal.numOfMonthsToAchieve}} months</span>
+          <div class="goal-progress progress">
+              <div 
+                class="progress-bar bg-success" 
+                role="progressbar" 
+                [attr.aria-value-now]="getGoalProgress()"
+                [style.width]="getGoalProgressPct()"
+                aria-valuemin="0" 
+                aria-valuemax="100">
+              </div>
+          </div>
+          <div class="goal-progress-text">
+            <span>{{getCurrentFundValue() | currency:'INR'}} of {{getInflatedGoalValue() | currency:'INR'}}</span>
+          </div>
+      </div>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
+
+<!--div>
   <div class="row">
     <div class="col-sm-5">
       <div 
@@ -65,4 +99,4 @@
 
   </div>
   
-</div>
+</div-->
