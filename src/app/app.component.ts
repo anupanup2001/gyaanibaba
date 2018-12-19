@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'paisagyaan';
+
+  onClick() {
+    const s: String = 'Hello World';
+    console.log('value of s is ' + s);
+  }
 }

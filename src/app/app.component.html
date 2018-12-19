@@ -1,11 +1,12 @@
 <mdc-top-app-bar >
   <mdc-top-app-bar-row>
     <mdc-top-app-bar-section title="₹ Paisagyaan">
-      <mdc-icon mdcTopAppBarNavIcon>menu</mdc-icon>
+      <mdc-icon mdcTopAppBarNavIcon (click)="onClick()">menu</mdc-icon>
     </mdc-top-app-bar-section>
 
   </mdc-top-app-bar-row>  
 </mdc-top-app-bar>
 
-
+<div class="outlet">
 <router-outlet></router-outlet>
+</div>
