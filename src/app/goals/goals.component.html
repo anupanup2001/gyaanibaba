@@ -1,3 +1,10 @@
 <p>
   goals works!
+  <app-goal *ngFor="let goal of goals"
+    [goal]="goal"></app-goal>
+  <button mdc-fab (click)="addGoal()">
+    <mdc-icon>add</mdc-icon>
+  </button>
+
+  <app-edit-goal *ngIf="isEdit"></app-edit-goal>
 </p>

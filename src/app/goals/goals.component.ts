@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./goals.component.scss']
 })
 export class GoalsComponent implements OnInit {
-
+  goals = ['Goal1', 'Goal2'];
+  isEdit: boolean;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  addGoal() {
+    console.log('Adding goal');
+    this.isEdit = true ;
   }
 
 }

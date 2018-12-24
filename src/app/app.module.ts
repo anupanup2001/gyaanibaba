@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppMaterialModule } from './material.module';
 import { GoalsComponent } from './goals/goals.component';
+import { GoalComponent } from './goals/goal/goal.component';
+import { EditGoalComponent } from './goals/edit-goal/edit-goal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GoalsComponent
+    GoalsComponent,
+    GoalComponent,
+    EditGoalComponent
   ],
   imports: [
     BrowserModule,
